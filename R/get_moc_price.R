@@ -1,3 +1,19 @@
+#' @title get_moc_price
+#' @description get a price data from moc opendata
+#' @param product_id a product id
+#' @param from_date starting date , Default: '2020-01-01'
+#' @param to_date end date, Default: Sys.Date()
+#' @param meta a , Default: FALSE
+#' @return a price data in data.frame
+#' @details 
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+# '  price_R11002 <- get_moc_price("R11002")
+#'  }
+#' }
+#' @rdname get_moc_price
+#' @export 
 get_moc_price <- function(product_id, 
                           from_date = "2020-01-01", 
                           to_date = Sys.Date(),
@@ -37,6 +53,3 @@ get_moc_price <- function(product_id,
   
   return(data)
 }
-
-#example
-#price_R11002 <- get_moc_price("R11002")
