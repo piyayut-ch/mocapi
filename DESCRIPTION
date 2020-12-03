@@ -8,6 +8,9 @@ Authors@R:
            email = "piyayut.ch@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
+URL: 
+  https://piyayut-ch.github.io/mocdata/,
+  https://github.com/piyayut-ch/mocdata
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

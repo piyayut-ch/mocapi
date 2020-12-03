@@ -6,6 +6,8 @@
 
 แพคเกจ mocdata ใช้สำหรับดึงข้อมูลจาก [ข้อมูลเปิดภาครัฐของกระทรวงพาณิชย์](https://data.moc.go.th)
 
+[ดูรายละเอียดเพิ่มเติมของ package](https://github.com/piyayut-ch/mocdata)
+
 ## Installation
 
 download ได้จาก github repo
