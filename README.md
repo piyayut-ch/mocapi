@@ -8,7 +8,7 @@
 
 ## Installation
 
-You can install the released version of mocdata from [CRAN](https://CRAN.R-project.org) with:
+download ได้จาก github repo
 
 ``` r
 remotes::install_github("piyayut-ch/mocdata")
@@ -21,5 +21,7 @@ remotes::install_github("piyayut-ch/mocdata")
 ``` r
 library(mocdata)
 ## basic example code
+price_R11002 <- get_moc_price("R11002")
+head(price_R11002)
 ```
 
