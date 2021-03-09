@@ -4,9 +4,9 @@
 <!-- badges: end -->
 
 แพคเกจ mocdata ใช้สำหรับดึงข้อมูลราคาสินค้าเกษตรจาก [ข้อมูลเปิดภาครัฐของกระทรวงพาณิชย์](https://data.moc.go.th)
-ดูรายละเอียดเพิ่มเติมของ package 
-[source code](https://github.com/piyayut-ch/mocdata)
-[webpage](https://github.com/piyayut-ch/mocdata)
+ดูรายละเอียดเพิ่มเติมของ package ได้ทาง
+[github](https://github.com/piyayut-ch/mocdata) หรือ 
+[webpage](https://piyayut-ch.github.io/mocdata/)
 
 ## Installation
 
