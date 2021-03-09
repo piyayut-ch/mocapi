@@ -1,20 +1,12 @@
-#' @title get_moc_price
-#' @description get a price data from moc opendata
-#' @param product_id a product id
-#' @param from_date starting date , Default: '2021-01-01'
-#' @param to_date end date, Default: Sys.Date()
-#' @param meta a , Default: FALSE
-#' @return a price data in data.frame
-#' @details
-#' @examples
-#' \dontrun{
-#' if(interactive()) {
-#' # get white rice 100% grad A (new rice) 
-#'  price_R11002 <- get_moc_price("R11002")
-#'  }
-#' }
-#' @rdname get_moc_price
-#' @export
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library("mocdata")
+```
+
+```{r}
 get_moc_price <- function(product_id,
                           from_date = "2021-01-01",
                           to_date = Sys.Date(),
@@ -56,3 +48,51 @@ get_moc_price <- function(product_id,
 
   return(data)
 }
+```
+
+```{r}
+ref_agproducts %>%
+  filter(grepl("R11002", product_id))
+```
+
+```{r}
+x <- get_moc_price("P16011", from_date = "2020-01-01", meta = FALSE)
+```
+
+```{r}
+x
+# attr(x, 'meta')
+```
+
+```{r}
+get_moc_data <- function(query) {
+  # initiate get object
+  res <- httr::GET(
+    "https://dataapi.moc.go.th/cpig-indexes?",
+    query = query
+  )
+
+  # transform from json to list
+  res <- res %>%
+    httr::content("text") %>%
+    jsonlite::fromJSON()
+  
+  return(res)
+}
+```
+
+```{r}
+query <- list(
+  region_id = 2
+)
+
+get_moc_data(query)
+```
+
+```{r}
+box::use(ggplot2[...])
+```
+
+```{r}
+
+```

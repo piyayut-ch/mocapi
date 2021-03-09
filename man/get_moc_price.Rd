@@ -6,7 +6,7 @@
 \usage{
 get_moc_price(
   product_id,
-  from_date = "2020-01-01",
+  from_date = "2021-01-01",
   to_date = Sys.Date(),
   meta = FALSE
 )
@@ -14,7 +14,7 @@ get_moc_price(
 \arguments{
 \item{product_id}{a product id}
 
-\item{from_date}{starting date , Default: '2020-01-01'}
+\item{from_date}{starting date , Default: '2021-01-01'}
 
 \item{to_date}{end date, Default: Sys.Date()}
 
@@ -28,7 +28,9 @@ get a price data from moc opendata
 }
 \examples{
 \dontrun{
-if(interactive()){
+if(interactive()) {
+# get white rice 100\% grad A (new rice) 
+ price_R11002 <- get_moc_price("R11002")
  }
 }
 }
