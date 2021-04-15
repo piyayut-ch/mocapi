@@ -3,7 +3,12 @@ library(tidyverse)
 ```
 
 ```{r}
-library("mocdata")
+library(mocdata)
+```
+
+```{r}
+ref_price_moc %>%
+  filter(commod == "ข้าว")
 ```
 
 ```{r}

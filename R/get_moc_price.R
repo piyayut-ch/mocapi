@@ -5,7 +5,6 @@
 #' @param to_date end date, Default: Sys.Date()
 #' @param meta a , Default: FALSE
 #' @return a price data in data.frame
-#' @details
 #' @examples
 #' \dontrun{
 #' if(interactive()) {
@@ -40,7 +39,7 @@ get_moc_price <- function(product_id,
     dplyr::mutate(
       product_id = res$product_id,
       date = as.Date(date),
-      prive_avg = rowMeans(dplyr::across(price_min:price_max), na.rm = TRUE),
+      price_avg = rowMeans(dplyr::across(price_min:price_max), na.rm = TRUE),
       unit = res$unit
     ) %>%
     dplyr::select(date, product_id, everything())
